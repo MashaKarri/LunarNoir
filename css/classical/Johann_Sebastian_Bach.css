@@ -388,3 +388,90 @@
   color: #fff;
   cursor: pointer;
   }
+
+  @media (max-width: 1024px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 20px;
+    }
+  
+    .biography {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  
+    .biography-image img {
+      max-width: 380px;
+    }
+  
+    .composition-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .playlist-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    footer form {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+      text-align: center;
+    }
+  
+    header nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .biography {
+      gap: 20px;
+      padding: 30px 15px;
+    }
+  
+    .biography-text h2 {
+      font-size: 28px;
+    }
+  
+    .biography-text p {
+      font-size: 16px;
+    }
+  
+    .best-compositions {
+      padding: 50px 15px;
+    }
+  
+    .section-title {
+      font-size: 32px;
+    }
+  
+    .composition-item {
+      width: 100%;
+      max-width: 250px;
+    }
+  
+    .playlist {
+      padding: 40px 15px;
+    }
+  
+    .playlist-item img {
+      width: 100%;
+    }
+  
+    footer {
+      padding: 15px;
+    }
+  
+    footer .contact-info p {
+      font-size: 16px;
+    }
+  }
+  

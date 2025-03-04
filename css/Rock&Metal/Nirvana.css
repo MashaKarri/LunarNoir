@@ -1,0 +1,679 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+          
+  body {
+  background-color: #f9f9f9;
+  color: #000;
+  }
+      
+      
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  }
+          
+  header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  }
+          
+  header nav {
+  display: flex;
+  gap: 20px;
+  }
+          
+  header nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  }
+          
+  .genres {
+  position: relative;
+  display: flex;
+  align-items: center;
+  }
+          
+  .genres-btn {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  cursor: pointer;
+  }
+          
+  .dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  }
+          
+  .dropdown-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  }
+          
+  .dropdown-item:hover {
+  background-color: #f0f0f0;
+  }
+          
+  .genres {
+  position: relative;
+  }
+          
+  .dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -100px;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  white-space: nowrap;
+  }
+          
+  .dropdown-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  }
+          
+  .genre {
+  display: block;
+  font-size: 17px;
+  }
+          
+  .sub-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 200px;
+  white-space: nowrap;
+  }
+          
+  .sub-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  }
+          
+  .sub-dropdown a:hover {
+  background-color: #f0f0f0;
+  }
+          
+  .dropdown-item:hover .sub-dropdown {
+  display: block;
+  }
+          
+  .genres:hover .dropdown {
+  display: block;
+  }
+
+
+  .bio-section {
+  display: flex;
+  min-height: calc(110vh - 90px);
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  }
+
+  .bio-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  }
+
+  .bio-content {
+  width: 50%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-color: #fff;
+  }
+      
+  .bio-text {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  background: rgba(0, 15, 19, 0.55);
+  padding: 20px;
+  color: #ddd;
+  border-left: 8px solid #00000068;
+  border: solid 1px #051320;
+  position: relative;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bio-text::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 10%;
+  width: 10px;
+  height: 80%;
+  background: rgba(0, 255, 255, 0.8);
+  filter: blur(8px);
+  border-radius: 5px;
+  }
+
+  .bio-image {
+  width: 50%;
+  position: relative;
+  background-image: url("/images/Rock&Metal/Nirvana_page/about_band/about_band_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  }
+      
+  .bio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  }
+      
+  .bio-overlay-title {
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 2px;
+  font-family: "Aboreto", serif;
+  font-weight: 900;
+  font-size: 45px;
+  }
+
+  .bio-decoration::before,
+  .bio-decoration::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(0, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 20%;
+  left: -50px;
+  animation: pulse 3s infinite ease-in-out alternate;
+  filter: blur(4px);
+  opacity: 0.8;
+  }
+    
+  .bio-decoration::after {
+  width: 140px;
+  height: 140px;
+  left: auto;
+  right: -60px;
+  top: 60%;
+  animation-delay: 1.5s;
+  border: 3px dashed rgba(0, 255, 255, 0.8);
+  }
+    
+  .bio-content::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 6px;
+  background: linear-gradient(90deg, #00ffff, transparent);
+  top: 10px;
+  left: 0;
+  animation: slideLine 2s infinite ease-in-out alternate;
+  }
+    
+  .bio-content::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, #00ffff);
+  bottom: 10px;
+  left: 0;
+  animation: slideLine 2s infinite ease-in-out alternate;
+  animation-delay: 1s;
+  }
+    
+  .bio-image::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  animation: pulse 4s infinite ease-in-out;
+  opacity: 0.7;
+  z-index: 1;
+  }
+    
+  .bio-image::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.2);
+  top: 70%;
+  left: 70%;
+  border-radius: 50%;
+  animation: blink 3s infinite alternate;
+  filter: blur(20px);
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.3);
+      opacity: 0.2;
+    }
+  }
+    
+  @keyframes slideLine {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30px);
+    }
+  }
+    
+  @keyframes blink {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+
+  .albums {
+  padding: 100px 0;
+  background-color:rgba(0, 0, 0, 0.9);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  }
+
+  .albums::before{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  border-radius: 50%;
+  top: 10%;
+  left: -60px;
+  animation: float 5s infinite ease-in-out alternate;
+  }
+
+  .album::before {
+  content: "✖";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  color: #00ffff;
+  opacity: 0.7;
+  }
+
+  .albums::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  }
+      
+  .albums-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+  }
+      
+  .albums-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 40px;
+  }
+      
+  .line {
+  width: 100px;
+  height: 2px;
+  background: #00ffff;
+  }
+      
+  .line.left {
+  margin-right: 150px;
+  }
+      
+  .line.right {
+  margin-left: 40px;
+  }
+      
+  .albums-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  }
+      
+  .album {
+  background: #e8e8e8;
+  width: 320px;
+  padding: 20px;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .album-mtitle {
+  font-family: 'Ruslan Display', serif;
+  font-size: 48px;
+  color: #f4f4f4;
+  }
+      
+  .album-image {
+  width: 85%;
+  height: 230px;
+  overflow: hidden;
+  margin-left: auto;
+  }
+      
+  .album-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+      
+  .album-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #000;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  }
+      
+  .album-description {
+  font-family: "EB Garamond", serif;
+  font-size: 19px;
+  line-height: 1.4;
+  color: #333;
+  }
+      
+  .album-decor {
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  }
+
+  @keyframes float {
+    0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+           transform: translateY(-15px);
+        }
+      }
+
+
+  .songs {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url('/images/Rock&Metal/Nirvana_page/music/music_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .songs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  }
+
+  .songs * {
+  position: relative;
+  z-index: 2;
+  }
+
+  .songs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  }
+
+  .songs-title {
+  font-size: 72px;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff;
+  }
+
+  .songs-subtitle {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #e5e5e5ae;
+  max-width: 600px;
+  margin: 10px auto 40px;
+  line-height: 1.6;
+  }
+
+  .songs-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  }
+
+  .song-small {
+  width: 200px;
+  }
+
+  .song-large {
+  width: 260px;
+  }
+
+  .song {
+  text-align: center;
+  }
+
+  .song-image {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  }
+
+  .song-small .song-image img {
+  height: 200px;
+  object-fit: cover;
+  }
+
+  .song-large .song-image img {
+  height: 250px;
+  object-fit: cover;
+  }
+
+  .song-name {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+  }
+
+  .song-description {
+  font-family: "EB Garamond", serif;
+  font-size: 17px;
+  color: #ffffffba;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+  .listen-btn {
+  position: relative;
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  border: solid 1px #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .listen-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  }
+  
+   
+  footer {
+  padding: 40px 60px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  }
+    
+  footer .contact-info {
+  margin-bottom: 30px;
+  }
+    
+  footer .contact-info p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 10px 0;
+  }
+  
+  footer .social-media {
+  margin-bottom: 30px;
+  }
+    
+  footer .social-media a {
+  margin: 0 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+  }
+    
+  footer .social-media a:hover {
+  color: #ff7f00;
+  }
+    
+  footer .newsletter {
+  margin-bottom: 30px;
+  }
+    
+  footer .newsletter h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  }
+    
+  footer form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  }
+    
+  footer input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 300px;
+  }
+    
+  footer button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: solid 1px #f9f9f9;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+    
+  footer button:hover {
+  background-color: #ff7f00;
+  }
+    
+  footer .footer-info {
+  margin-top: 30px;
+  }
+    
+  footer .footer-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  }

@@ -136,6 +136,262 @@
   }
 
 
+  .about-band {
+  height: 800px;
+  padding: 40px 20px;
+  background-image: url('/images/Rock&Metal/Yungblud_page/about_band/about_band_1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  }
+      
+  .about-band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  }
+
+  .about-band::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  z-index: 2;
+  }
+
+  
+  .about-band .content {
+  max-width: 600px;
+  margin-left: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  border: solid 1px #fff;
+  padding: 30px;
+  z-index: 2;
+  }
+  
+  .about-band h1 {
+  font-family: "Aboreto", serif;
+  font-weight: 900;
+  font-size: 54px;
+  margin-bottom: 20px;
+  }
+  
+  .about-band p {
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  }
+
+
+  .albums-section {
+  background-color: #0d0f14;
+  text-align: center;
+  padding: 50px 20px;
+  padding-bottom: 1px;
+  }
+
+  .albums-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin-top: 50px;
+  }
+
+  .album-title {
+  font-family: "Ruslan Display", serif;
+  font-weight: 100;
+  font-size: 52px;
+  color: #ddd;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .albums-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 40px;
+  }
+  
+  .album-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  text-align: center;
+  }
+  
+  .album-photo {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000099;
+  margin-bottom: 15px;
+  }
+  
+  .album-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .release-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgb(255, 255, 255);
+  font-family: "Aboreto", serif;
+  color: #000000;
+  font-size: 15px;
+  padding: 4px 8px;
+  }
+  
+  .album-subtitle {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  }
+  
+  .album-description {
+  font-family: "EB Garamond", serif;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #ffffffb4;
+  }
+  
+
+  .music-section {
+  position: relative;
+  padding: 40px 20px;
+  background-image: url('/images/Rock&Metal/Yungblud_page/music/music_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  min-height: 75vh;
+  }
+  
+  .music-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  }
+  
+  .music-title {
+  font-family: "Ruslan Display", serif;
+  font-weight: 100;
+  font-size: 52px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .music-container {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .music-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .music-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .music-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .music-subtitle {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .music-description {
+  font-family: "EB Garamond", serif;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #ffffffb4;
+  position: relative;
+  z-index: 2;
+  }
+  
+  .listen-btn {
+  position: relative;
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  border: solid 1px #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  z-index: 2;
+  }
+  
+  .listen-btn:hover {
+  background-color: #3ba2f021;
+  }
+  
+  
   footer {
   padding: 20px 40px;
   background-color: #333;

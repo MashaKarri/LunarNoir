@@ -1,0 +1,440 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+        
+  body {
+  background-color: #f9f9f9;
+  color: #000;
+  }
+    
+    
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  }
+        
+  header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  }
+        
+  header nav {
+  display: flex;
+  gap: 20px;
+  }
+        
+  header nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  }
+        
+  .genres {
+  position: relative;
+  display: flex;
+  align-items: center;
+  }
+        
+  .genres-btn {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  cursor: pointer;
+  }
+        
+  .dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  }
+        
+  .dropdown-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  }
+        
+  .dropdown-item:hover {
+  background-color: #f0f0f0;
+  }
+        
+  .genres {
+  position: relative;
+  }
+        
+  .dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -100px;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  white-space: nowrap;
+  }
+        
+  .dropdown-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  }
+        
+  .genre {
+  display: block;
+  font-size: 17px;
+  }
+        
+  .sub-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: #fff;
+  border: solid 1px #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 200px;
+  white-space: nowrap;
+  }
+        
+  .sub-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  }
+        
+  .sub-dropdown a:hover {
+  background-color: #f0f0f0;
+  }
+        
+  .dropdown-item:hover .sub-dropdown {
+  display: block;
+  }
+        
+  .genres:hover .dropdown {
+  display: block;
+  }
+
+
+  .history {
+  position: relative;
+  height: 600px;
+  background: url('/images/Rock&Metal/Led_Zeppelin_page/about_band/about_band_1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+  min-height: 85vh;
+  }
+      
+  .history .content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  }
+      
+  .history h1 {
+  font-family: "Aboreto", serif;
+  font-weight: 900;
+  font-size: 54px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  }
+      
+  .history p {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  }
+
+
+  .albums {
+  background-color: #070402e6;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  }
+
+  .albums::before,
+  .albums::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  }
+
+  .albums::before {
+  top: 0;
+  }
+
+  .albums::after {
+  bottom: 0;
+  }
+
+  .section-title {
+  font-family: 'Ruslan Display', serif;
+  font-size: 48px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  padding: 15px 30px;
+  }
+
+  .albums-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  }
+
+  .column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  }
+
+  .album {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url('/images/Rock&Metal/Led_Zeppelin_page/albums/album_info_bg.jpg');
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  }
+
+  .album::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  }
+  
+
+  .album img {
+  width: 180px;
+  height: 180px;
+  margin-right: 20px;
+  position: relative;
+  z-index: 2;
+  }
+
+  .album-info {
+  background-color: #000;
+  border: solid 1px #fff;
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  }
+
+  .album-info h3 {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+  }
+
+  .album-info p {
+  font-family: "EB Garamond", serif;
+  font-size: 19px;
+  line-height: 1.4;
+  color: #ffffffb4;
+  margin: 5px 0;
+  }
+
+
+  .popular-songs {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('/images/Rock&Metal/Led_Zeppelin_page/music/music_bg.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  }
+  
+  .section-title {
+  font-family: 'Ruslan Display', serif;
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  }
+  
+  .songs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  }
+  
+  .song {
+  position: relative;
+  }
+  
+  .song img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  }
+  
+  .song-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: left;
+  }
+
+  .song-info h3 {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  }
+
+  .song-info p {
+  font-family: "EB Garamond", serif;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 5px 0;
+  }
+
+  .listen-btn {
+  position: relative;
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  border: solid 1px #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 2;
+  }
+
+  
+  footer {
+  padding: 40px 60px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  }
+  
+  footer .contact-info {
+  margin-bottom: 30px;
+  }
+  
+  footer .contact-info p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 10px 0;
+  }
+  
+  footer .social-media {
+  margin-bottom: 30px;
+  }
+  
+  footer .social-media a {
+  margin: 0 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+  }
+  
+  footer .social-media a:hover {
+  color: #ff7f00;
+  }
+  
+  footer .newsletter {
+  margin-bottom: 30px;
+  }
+  
+  footer .newsletter h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  }
+  
+  footer form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  }
+  
+  footer input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 300px;
+  }
+  
+  footer button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: solid 1px #f9f9f9;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  footer button:hover {
+  background-color: #ff7f00;
+  }
+  
+  footer .footer-info {
+  margin-top: 30px;
+  }
+  
+  footer .footer-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  }

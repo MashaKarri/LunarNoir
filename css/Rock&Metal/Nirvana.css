@@ -195,7 +195,7 @@
   .bio-image {
   width: 50%;
   position: relative;
-  background-image: url("/images/Rock&Metal/Nirvana_page/about_band/about_band_1.jpg");
+  background-image: url('../../../images/Rock&Metal/Nirvana_page/about_band/about_band_1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -476,7 +476,7 @@
   position: relative;
   text-align: center;
   padding: 80px 20px;
-  background-image: url('/images/Rock&Metal/Nirvana_page/music/music_bg.jpg');
+  background-image: url('../../../images/Rock&Metal/Nirvana_page/music/music_bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -139,7 +139,7 @@
   .about-band {
   height: 800px;
   padding: 40px 20px;
-  background-image: url('/images/Rock&Metal/Yungblud_page/about_band/about_band_1.jpg');
+  background-image: url('../../../images/Rock&Metal/Yungblud_page/about_band/about_band_1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -286,7 +286,7 @@
   .music-section {
   position: relative;
   padding: 40px 20px;
-  background-image: url('/images/Rock&Metal/Yungblud_page/music/music_background.jpg');
+  background-image: url('../../../images/Rock&Metal/Yungblud_page/music/music_background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

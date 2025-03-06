@@ -23,8 +23,13 @@
     <header>
       <div class="logo">LN</div>
       <nav>
-        <a href="/index.html">Home</a>
+        <a href="/index.html"
+          ><svg class="home-icon" width="20" height="20">
+            <use href="/SVG/icons/symbol-defs.svg#home"></use></svg
+          >Home</a
+        >
         <a href="#about">About</a>
+        <a href="#blog">Blog</a>
         <a href="#team">Team</a>
 
         <div class="genres">
@@ -134,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="blog">
+    <section class="blog" id="blog">
       <h2>Music Blog</h2>
       <div class="blog-posts">
         <div class="blog-post">
@@ -200,36 +205,69 @@
       </div>
     </section>
     <section class="social" id="team">
-      <h2>Meet Our Team</h2>
       <div class="team-content">
-        <div class="text-with-image">
-          <img src="./images/main_page/team/team_1.png" alt="electric guitar" />
-          <div class="text-buttons">
-            <p>
-              We are a team of musicians, producers, and experts who love music
-              and share their knowledge about it. We talk about different
-              genres, interesting stories, and important figures in the music
-              industry. Subscribe to us so as not to miss the most interesting
-              materials!
-            </p>
-            <div class="buttons">
-              <button>Learn More</button>
-              <button>Join Us</button>
-            </div>
+        <div class="text-content">
+          <h2>Meet Our Team</h2>
+          <p>
+            We are a team of musicians, producers, and experts who love music
+            and share their knowledge about it. We talk about different genres,
+            interesting stories, and important figures in the music industry.
+            Subscribe to us so as not to miss the most interesting materials!
+          </p>
+          <div class="buttons">
+            <button>Learn More</button>
+            <button>Join Us</button>
           </div>
+        </div>
+        <div class="image-content">
+          <img src="./images/main_page/team/team_1.png" alt="electric guitar" />
         </div>
       </div>
     </section>
+
     <footer id="contact">
       <div class="contact-info">
         <p>LunarNoir Inc.</p>
         <p>Email: contact@lunarnoir.com</p>
         <p>Phone: +1 123 456 7890</p>
       </div>
-      <form>
-        <input type="email" placeholder="Your email address" />
-        <button type="submit">Subscribe</button>
-      </form>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank"
+          ><svg class="contact-icon" width="20" height="20">
+            <use href="/SVG/icons/symbol-defs.svg#facebook"></use>
+          </svg>
+          Facebook</a
+        >
+        <a href="https://web.telegram.org/k/" target="_blank"
+          ><svg class="contact-icon" width="20" height="20">
+            <use href="/SVG/icons/symbol-defs.svg#telegram"></use>
+          </svg>
+          Telegram</a
+        >
+        <a href="https://instagram.com" target="_blank"
+          ><svg class="contact-icon" width="20" height="20">
+            <use href="/SVG/icons/symbol-defs.svg#instagram"></use>
+          </svg>
+          Instagram</a
+        >
+        <a href="https://spotify.com" target="_blank"
+          ><svg class="contact-icon" width="20" height="20">
+            <use href="/SVG/icons/symbol-defs.svg#spotify"></use>
+          </svg>
+          Spotify</a
+        >
+      </div>
+      <div class="newsletter">
+        <h3>Subscribe for Latest Music Releases</h3>
+        <form>
+          <input type="email" placeholder="Your email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 LunarNoir Inc. All rights reserved.</p>
+        <p>Made with passion for music!</p>
+      </div>
     </footer>
   </body>
 </html>

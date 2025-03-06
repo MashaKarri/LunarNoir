@@ -30,10 +30,16 @@
   }
         
   header nav a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: #000;
   font-size: 18px;
   padding: 5px 0;
+  }
+
+  .home-icon {
+  margin-right: 7px;
   }
         
   .genres {
@@ -357,7 +363,7 @@
   z-index: 2;
   }
 
-  
+ 
   footer {
   padding: 40px 60px;
   background-color: #222;
@@ -365,59 +371,65 @@
   text-align: center;
   font-family: "Cormorant Garamond", serif;
   }
-  
+              
   footer .contact-info {
   margin-bottom: 30px;
   }
-  
+              
   footer .contact-info p {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.4;
   margin: 10px 0;
   }
-  
+            
   footer .social-media {
   margin-bottom: 30px;
   }
-  
+              
   footer .social-media a {
   margin: 0 15px;
-  font-size: 18px;
+  font-size: 21px;
   text-decoration: none;
   color: #f9f9f9;
+  display: inline-flex;
+  align-items: center;
   transition: color 0.3s ease;
   }
-  
+              
   footer .social-media a:hover {
   color: #ff7f00;
   }
-  
+        
+  footer .contact-icon {
+  margin-right: 7px;
+  }
+              
   footer .newsletter {
   margin-bottom: 30px;
   }
-  
+              
   footer .newsletter h3 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   }
-  
+              
   footer form {
   display: flex;
   justify-content: center;
   gap: 10px;
   }
-  
+              
   footer input[type="email"] {
   padding: 12px;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   border-radius: 4px;
   width: 300px;
   }
-  
+              
   footer button {
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 18px;
   border: solid 1px #f9f9f9;
   border-radius: 4px;
   background-color: #000;
@@ -425,16 +437,12 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   }
-  
+              
   footer button:hover {
   background-color: #ff7f00;
   }
-  
-  footer .footer-info {
-  margin-top: 30px;
-  }
-  
+              
   footer .footer-info p {
-  font-size: 14px;
+  font-size: 17px;
   margin: 5px 0;
   }

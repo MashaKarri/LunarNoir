@@ -29,12 +29,17 @@
   }
 
   header nav a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: #000;
   font-size: 18px;
   padding: 5px 0;
   }
 
+  .home-icon {
+  margin-right: 7px;
+  }
 
   .genres {
   position: relative;
@@ -407,62 +412,50 @@
     
   .blog-post:has(.toggle-input:checked) .close-content {
   display: block;
-  } 
+  }
   
   
   .social {
   padding: 40px 20px;
   background-color: #fff;
-  text-align: center;
   position: relative;
+  display: flex;
+  justify-content: center;
   }
-      
-  .social h2 {
-  font-family: "Cinzel", serif;
-  font-size: 47px;
-  margin-top: 20px;
-  }
-      
+  
   .social .team-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  }
-      
-  .social .text-with-image {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
   }
   
-  .social .text-with-image img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
+  .social .text-content {
+  flex: 1;
+  text-align: left;
   }
   
-  .social .text-with-image p {
+  .social .text-content h2 {
+  font-family: "Cinzel", serif;
+  font-size: 47px;
+  margin-bottom: 35px;
+  }
+  
+  .social .text-content p {
   font-family: "Titillium Web", serif;
   font-size: 20px;
   line-height: 1.4;
-  margin: 0;
-  flex: 1;
-  text-align: left;
-  padding-right: 20px;
+  margin: 0 0 25px 0;
   }
-      
+  
   .social .buttons {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   }
-      
+  
   .social button {
-  margin-top: 15px;
   padding: 10px 30px;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
@@ -471,44 +464,97 @@
   cursor: pointer;
   }
   
+  .social .image-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  }
+  
+  .social .image-content img {
+  max-width: 270px;
+  height: auto;
+  }
+  
 
   footer {
-  padding: 20px 40px;
-  background-color: #333;
+  padding: 40px 60px;
+  background-color: #222;
   color: #fff;
   text-align: center;
-  }
-
-  footer .contact-info {
-  margin-bottom: 20px;
-  }
-
-  footer .contact-info p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  line-height: 1.2;
-  margin: 5px 0;
+  }
+      
+  footer .contact-info {
+  margin-bottom: 30px;
+  }
+      
+  footer .contact-info p {
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 10px 0;
+  }
+    
+  footer .social-media {
+  margin-bottom: 30px;
+  }
+      
+  footer .social-media a {
+  margin: 0 15px;
+  font-size: 21px;
+  text-decoration: none;
+  color: #f9f9f9;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  }
+      
+  footer .social-media a:hover {
+  color: #ff7f00;
   }
 
+  footer .contact-icon {
+  margin-right: 7px;
+  }
+      
+  footer .newsletter {
+  margin-bottom: 30px;
+  }
+      
+  footer .newsletter h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  }
+      
   footer form {
   display: flex;
   justify-content: center;
   gap: 10px;
   }
-
+      
   footer input[type="email"] {
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px;
+  font-size: 18px;
   border: none;
   border-radius: 4px;
+  width: 300px;
   }
-
+      
   footer button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 25px;
+  font-size: 18px;
   border: solid 1px #f9f9f9;
   border-radius: 4px;
   background-color: #000;
   color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+      
+  footer button:hover {
+  background-color: #ff7f00;
+  }
+      
+  footer .footer-info p {
+  font-size: 17px;
+  margin: 5px 0;
   }

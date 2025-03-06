@@ -252,12 +252,11 @@
   text-align: center;
   }
   
-  .work-item .image-placeholder {
+  .work-item img {
   width: 100%;
   height: 200px;
-  background-color: lightgray;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  display: block;
   }
   
   .work-item .separator {
@@ -281,23 +280,6 @@
   padding: 0 10px 10px;
   }
   
-  .image-symphony {
-  background-image: url('../../../images/classical/Ludwig_van_Beethoven_page/works/work_1.jpg');
-  }
-  
-  .image-moonlight {
-  background-image: url('../../../images/classical/Ludwig_van_Beethoven_page/works/work_2.jpg');
-  }
-  
-  .image-ode-to-joy {
-  background-image: url('../../../images/classical/Ludwig_van_Beethoven_page/works/work_3.jpg');
-  }
-  
-  .image-pathetic-sonata {
-  background-image: url('../../../images/classical/Ludwig_van_Beethoven_page/works/work_4.jpg');
-  }
-  
-
   .playlist {
   text-align: center;
   padding: 60px 20px;

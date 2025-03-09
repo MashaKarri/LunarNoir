@@ -569,23 +569,22 @@
   }
   
   .about-band {
-  height: 450px;
-  padding-left: 20px;
-  align-items: flex-start;
+  height: auto;
+  padding: 20px;
   }
-  
+
   .about-band .content {
-  max-width: 90%;
-  margin-left: 0;
+  max-width: 100%;
   padding: 15px;
+  overflow: hidden;
   }
-  
+
   .about-band h1 {
-  font-size: 36px !important;
+  font-size: 28px;
   }
-  
+
   .about-band p {
-  font-size: 18px;
+  font-size: 14px;
   }
   
   .albums-section {
@@ -660,22 +659,28 @@
   }
   
   .about-band {
-  height: 600px;
-  padding-left: 40px;
+  height: auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   }
-  
+
   .about-band .content {
-  max-width: 500px;
-  margin-left: 50px;
+  margin: 0;
   padding: 20px;
+  overflow: hidden;
   }
-  
+
   .about-band h1 {
-  font-size: 44px;
+  font-size: 32px;
+  line-height: 1.2;
   }
-  
+
   .about-band p {
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.5;
   }
   
   .albums-section {

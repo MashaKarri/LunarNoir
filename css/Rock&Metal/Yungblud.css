@@ -17,108 +17,189 @@
   padding: 20px 40px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 100;
   }
-      
+  
   header .logo {
   font-size: 32px;
   font-weight: bold;
   }
-      
+          
   header nav {
   display: flex;
-  gap: 20px;
-  }
-      
-  header nav a {
-  display: inline-flex;
   align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  }
+        
+  header nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   color: #000;
   font-size: 18px;
   padding: 5px 0;
+  cursor: pointer;
+  white-space: nowrap;
   }
-
+        
   .home-icon {
-  margin-right: 7px;
+  display: block;
+  width: 20px;
+  height: 20px;
   }
-      
+          
+  header nav a, .genres-btn {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  cursor: pointer;
+  }
+          
   .genres {
   position: relative;
   display: flex;
   align-items: center;
   }
-      
-  .genres-btn {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  padding: 5px 0;
-  cursor: pointer;
-  }
-      
+          
   .dropdown {
   display: none;
   position: absolute;
   top: 30px;
-  left: 0;
+  right: 0;
   background-color: #fff;
-  border: solid 1px #333;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 10;
-  min-width: 150px;
-  }
-      
-  .dropdown-item {
-  position: relative;
-  padding: 10px 20px;
-  cursor: pointer;
-  }
-      
-  .dropdown-item:hover {
-  background-color: #f0f0f0;
-  }
-      
-  .genres {
-  position: relative;
-  }
-      
-  .dropdown {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: -100px;
-  background-color: #fff;
-  border: solid 1px #333;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 10;
-  min-width: 150px;
-  white-space: nowrap;
-  }
-      
-  .dropdown-item {
-  position: relative;
-  padding: 10px 20px;
-  cursor: pointer;
-  }
-      
-  .genre {
-  display: block;
-  font-size: 17px;
-  }
-      
-  .sub-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  background-color: #fff;
-  border: solid 1px #333;
+  border: 1px solid #333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   min-width: 200px;
-  white-space: nowrap;
+  padding: 10px 0;
+  }
+          
+  .dropdown.show {
+  display: block;
+  }
+          
+  .dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  }
+          
+  .dropdown-item:hover {
+  background-color: #f5f5f5;
+  }
+          
+  .sub-dropdown {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  }
+          
+  .sub-dropdown.show {
+  display: block;
+  }
+        
+  .sub-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  }
+          
+  .sub-dropdown a:hover {
+  background-color: #f0f0f0;
+  }
+          
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  }
+          
+  .hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  }
+        
+  @media (max-width: 768px) {
+  header nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 100;
+  flex-direction: column;
+  }
+          
+  header nav.open {
+  display: flex;
+  }
+        
+  header nav a {
+  padding: 10px 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  }
+    
+  .hamburger {
+  display: flex;
+  }
+    
+  .genres {
+  justify-content: flex-start;
+  width: 100%;
+  }
+          
+  .dropdown {
+  display: none;
+  position: static;
+  box-shadow: none;
+  }
+          
+  .dropdown.show {
+  display: block;
+  position: static;
+  }
+        
+  .dropdown-item {
+  position: relative;
+  }
+        
+  .sub-dropdown {
+  left: 100%;
+  top: 0;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  }
+        
+  .sub-dropdown.show {
+  display: block;
   }
       
   .sub-dropdown a {
@@ -128,20 +209,13 @@
   color: #000;
   font-size: 17px;
   }
-      
+        
   .sub-dropdown a:hover {
   background-color: #f0f0f0;
   }
-      
-  .dropdown-item:hover .sub-dropdown {
-  display: block;
-  }
-      
-  .genres:hover .dropdown {
-  display: block;
-  }
-
-
+}
+  
+  
   .about-band {
   height: 800px;
   padding: 40px 20px;
@@ -205,19 +279,22 @@
 
 
   .albums-section {
+  position: relative;
   background-color: #0d0f14;
   text-align: center;
   padding: 50px 20px;
-  padding-bottom: 1px;
+  padding-bottom: 30px;
   }
 
   .albums-section::after {
-  content: "";
-  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 1px;
-  background-color: white;
-  margin-top: 50px;
+  background: #fff;
+  z-index: 2;
   }
 
   .album-title {
@@ -480,3 +557,179 @@
   font-size: 17px;
   margin: 5px 0;
   }
+  
+  
+  @media (max-width: 768px) {
+  header {
+  padding: 10px 15px;
+  }
+  
+  header .logo {
+  font-size: 24px;
+  }
+  
+  .about-band {
+  height: 450px;
+  padding-left: 20px;
+  align-items: flex-start;
+  }
+  
+  .about-band .content {
+  max-width: 90%;
+  margin-left: 0;
+  padding: 15px;
+  }
+  
+  .about-band h1 {
+  font-size: 36px !important;
+  }
+  
+  .about-band p {
+  font-size: 18px;
+  }
+  
+  .albums-section {
+  padding: 30px 10px;
+  }
+  
+  .album-title {
+  font-size: 36px !important;
+  }
+  
+  .albums-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  }
+  
+  .album-item {
+  max-width: 100%;
+  }
+  
+  .album-photo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  }
+
+  .release-date {
+  font-size: 14px;
+  }
+  
+  .music-section {
+  padding: 20px 10px;
+  }
+  
+  .music-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  }
+  
+  .music-photo {
+  width: 220px !important;
+  height: 220px !important;
+  }
+  
+  .listen-btn {
+  font-size: 12px;
+  padding: 6px 12px;
+  }
+  
+  footer {
+  padding: 20px 30px;
+  }
+        
+  footer .newsletter input[type="email"] {
+  width: 100%;
+  }
+        
+  footer button {
+  width: 100%;
+  }
+}
+  
+  
+  @media (max-width: 1024px) {
+  header {
+  padding: 15px 20px;
+  }
+  
+  header .logo {
+  font-size: 28px;
+  }
+  
+  .about-band {
+  height: 600px;
+  padding-left: 40px;
+  }
+  
+  .about-band .content {
+  max-width: 500px;
+  margin-left: 50px;
+  padding: 20px;
+  }
+  
+  .about-band h1 {
+  font-size: 44px;
+  }
+  
+  .about-band p {
+  font-size: 18px;
+  }
+  
+  .albums-section {
+  padding: 40px 15px;
+  }
+  
+  .album-title {
+  font-size: 44px;
+  }
+  
+  .albums-container {
+  gap: 50px;
+  }
+  
+  .album-item {
+  max-width: 200px;
+  }
+  
+  .album-photo {
+  width: 200px;
+  height: 200px;
+  }
+  
+  .music-section {
+  padding: 30px 15px;
+  }
+  
+  .music-title {
+  font-size: 44px;
+  }
+  
+  .music-container {
+  gap: 50px;
+  }
+  
+  .music-photo {
+  width: 180px;
+  height: 180px;
+  }
+  
+  .listen-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  }
+  
+  footer {
+  padding: 30px 40px;
+  }
+  
+  footer .newsletter input[type="email"] {
+  width: 250px;
+  }
+  
+  footer button {
+  width: 250px;
+  }
+}

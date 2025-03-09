@@ -165,6 +165,11 @@
   .hamburger {
   display: flex;
   }
+
+  .genres {
+  justify-content: flex-start;
+  width: 100%;
+  }
     
   .dropdown {
   display: none;

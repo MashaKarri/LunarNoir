@@ -636,7 +636,7 @@
   }
 
   .main-banner h1 {
-  font-size: 60px !important;
+  font-size: 50px !important;
   }
 
   .main-banner p {
@@ -667,7 +667,8 @@
   }
 
   .catalog .item button {
-  width: 100%;
+  width: 70px;
+  font-size: 14px;
   margin-top: 10px;
   }
 

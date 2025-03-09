@@ -622,6 +622,7 @@
   
   .biography-image {
   width: 80%;
+  margin-top: 15px;
   }
   
   .works {
@@ -654,7 +655,7 @@
   
   .playlist-item img {
   width: 100%;
-  height: auto;
+  height: 300px;
   }
   
   footer .newsletter input[type="email"] {
@@ -663,5 +664,31 @@
   
   footer button {
   width: 250px;
+  }
+}
+
+
+  @media (min-width: 1440px) {
+  .works {
+  max-width: 1600px;
+  padding: 60px 80px;
+  }
+
+  .works-right {
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  }
+
+  .work-item img {
+  height: 250px;
+  }
+
+  .work-item h3 {
+  font-size: 22px;
+  }
+
+  .work-item p {
+  font-size: 18px;
   }
 }

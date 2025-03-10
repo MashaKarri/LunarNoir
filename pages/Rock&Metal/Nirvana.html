@@ -22,18 +22,19 @@
   <body>
     <header>
       <div class="logo">LN</div>
-      <nav>
-        <a href="../../index.html"
-          ><svg class="home-icon" width="20" height="20">
-            <use href="../../SVG/icons/symbol-defs.svg#home"></use></svg
-          >Home</a
-        >
+      <nav id="nav">
+        <a href="../../index.html">
+          <svg class="home-icon" width="20" height="20">
+            <use href="../../SVG/icons/symbol-defs.svg#home"></use>
+          </svg>
+          Home
+        </a>
         <a href="#about-band">About Band</a>
         <a href="#albums">Popular Albums</a>
         <a href="#music">Best Songs</a>
         <div class="genres">
-          <span class="genres-btn">Genres</span>
-          <div class="dropdown">
+          <span class="genres-btn" id="genres-btn">Genres</span>
+          <div class="dropdown" id="dropdown-menu">
             <div class="dropdown-item">
               <span class="genre">Classical</span>
               <div class="sub-dropdown">
@@ -49,6 +50,7 @@
                 >
               </div>
             </div>
+
             <div class="dropdown-item">
               <span class="genre">Rock & Metal</span>
               <div class="sub-dropdown">
@@ -59,6 +61,7 @@
                 <a href="../../pages/Rock&Metal/Nirvana.html">Nirvana</a>
               </div>
             </div>
+
             <div class="dropdown-item">
               <span class="genre">Electronic</span>
               <div class="sub-dropdown">
@@ -73,6 +76,7 @@
                 >
               </div>
             </div>
+
             <div class="dropdown-item">
               <span class="genre">Pop</span>
               <div class="sub-dropdown">
@@ -82,12 +86,19 @@
                 <a href="../../pages/pop_music/Billie_Eilish.html"
                   >Billie Eilish</a
                 >
-                <a href="../../pages/pop_music/Adriano Celentano.html">Adriano Celentano</a>
+                <a href="../../pages/pop_music/Adriano_Celentano.html"
+                  >Adriano Celentano</a
+                >
               </div>
             </div>
           </div>
         </div>
       </nav>
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </header>
     <main>
       <section id="about-band" class="bio-section">
@@ -279,5 +290,6 @@
         <p>Made with passion for music!</p>
       </div>
     </footer>
+    <script src="../../js/script.js"></script>
   </body>
 </html>

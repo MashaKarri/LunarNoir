@@ -663,13 +663,16 @@
   }
   
   .music-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+  width: 100%;
   }
   
   .music-card {
   width: 90%;
+  max-width: 300px;
   }
   
   .music-card-center {

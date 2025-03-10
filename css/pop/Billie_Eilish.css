@@ -808,23 +808,57 @@
   
   @media (max-width: 1440px) {
   .biography-section {
-  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 60px 40px;
-  text-align: left;
   }
-  
+
   .biography-content {
-  max-width: 700px;
+  max-width: 60%;
   width: 100%;
   padding: 30px;
-  margin-left: 5%;
+  margin: 0 auto;
   }
-  
+
   .biography-content h2 {
   font-size: 36px;
   }
-  
+
   .biography-content p {
   font-size: 18px;
+  }
+
+  .songs-section {
+  padding: 60px 40px;
+  text-align: center;
+  }
+
+  .songs-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  }
+
+  .songs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+
+  .song h3 {
+  font-size: 18px;
+  }
+
+  .song p {
+  font-size: 16px;
+  }
+
+  .song-btn {
+  font-size: 16px;
+  padding: 10px 20px;
   }
 }

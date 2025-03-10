@@ -685,20 +685,28 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-size: cover;
+  background-position: center;
   }
-  
+
   .biography-content {
-  max-width: 80%;
+  max-width: 85%;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  overflow: hidden;
   }
-  
+
   .biography-title h2 {
-  font-size: 32px;
+  font-size: 30px;
+  word-wrap: break-word;
   }
-  
+
   .biography-text p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   }
   
   .albums-grid {

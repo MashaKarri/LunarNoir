@@ -809,6 +809,10 @@
   height: 100px;
   padding-left: 15px;
   }
+
+  .bio-overlay-title {
+  font-size: 34px !important;
+  }
   
   .albums {
   padding: 30px 10px;

@@ -707,15 +707,18 @@
   .biography-section {
   height: auto;
   min-height: 50vh;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
   }
 
   .biography-content {
-  max-width: 80%;
+  max-width: 90%;
+  width: 100%;
   padding: 20px;
+  margin: 0 auto;
   }
 
   .biography-content h2 {
@@ -724,7 +727,7 @@
 
   .biography-content p {
   font-size: 17px;
-  line-height: 1.4;
+  line-height: 1.5;
   }
   
   .albums-container {
@@ -748,40 +751,42 @@
   .songs-section {
   height: auto;
   padding: 50px 20px;
+  text-align: center;
   }
-  
+
   .songs-title {
   font-size: 36px;
   }
-  
+
   .songs-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   }
-  
+
   .song {
   width: 80%;
   max-width: 280px;
-  transform: rotate(-10deg);
+  transform: rotate(-5deg);
   }
-  
+
   .song-2 {
-  transform: rotate(10deg);
+  transform: rotate(5deg);
   }
-  
+
   .song-3 {
-  transform: rotate(-15deg);
+  transform: rotate(-5deg);
   }
-  
+
   .song h3 {
   font-size: 18px;
   }
-  
+
   .song p {
   font-size: 14px;
   }
-  
+
   .song-btn {
   font-size: 14px;
   padding: 8px 16px;

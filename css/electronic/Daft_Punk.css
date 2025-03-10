@@ -8,8 +8,8 @@
   background-color: #f9f9f9;
   color: #000;
   }
-      
-      
+  
+   
   header {
   display: flex;
   justify-content: space-between;
@@ -17,110 +17,101 @@
   padding: 20px 40px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 100;
   }
-          
+        
   header .logo {
   font-size: 32px;
   font-weight: bold;
   }
-          
+                
   header nav {
   display: flex;
-  gap: 20px;
-  }
-          
-  header nav a {
-  display: inline-flex;
   align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  }
+              
+  header nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   color: #000;
   font-size: 18px;
   padding: 5px 0;
+  cursor: pointer;
+  white-space: nowrap;
   }
-  
+              
   .home-icon {
-  margin-right: 7px;
+  display: block;
+  width: 20px;
+  height: 20px;
   }
-          
+                
+  header nav a, .genres-btn {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0;
+  cursor: pointer;
+  }
+                
   .genres {
   position: relative;
   display: flex;
   align-items: center;
   }
-          
-  .genres-btn {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  padding: 5px 0;
-  cursor: pointer;
-  }
-          
+                
   .dropdown {
   display: none;
   position: absolute;
   top: 30px;
-  left: 0;
+  right: 0;
   background-color: #fff;
-  border: solid 1px #333;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 10;
-  min-width: 150px;
-  }
-         
-  .dropdown-item {
-  position: relative;
-  padding: 10px 20px;
-  cursor: pointer;
-  }
-          
-  .dropdown-item:hover {
-  background-color: #f0f0f0;
-  }
-          
-  .genres {
-  position: relative;
-  }
-          
-  .dropdown {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: -100px;
-  background-color: #fff;
-  border: solid 1px #333;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 10;
-  min-width: 150px;
-  white-space: nowrap;
-  }
-          
-  .dropdown-item {
-  position: relative;
-  padding: 10px 20px;
-  cursor: pointer;
-  }
-          
-  .genre {
-  display: block;
-  font-size: 17px;
-  }
-          
-  .sub-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  background-color: #fff;
-  border: solid 1px #333;
+  border: 1px solid #333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   min-width: 200px;
-  white-space: nowrap;
+  padding: 10px 0;
   }
-          
+                
+  .dropdown.show {
+  display: block;
+  }
+                
+  .dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  }
+                
+  .dropdown-item:hover {
+  background-color: #f5f5f5;
+  }
+                
+  .sub-dropdown {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  }
+                
+  .sub-dropdown.show {
+  display: block;
+  }
+         
   .sub-dropdown a {
   display: block;
   padding: 10px 15px;
@@ -128,20 +119,103 @@
   color: #000;
   font-size: 17px;
   }
-          
+                
   .sub-dropdown a:hover {
   background-color: #f0f0f0;
   }
-          
-  .dropdown-item:hover .sub-dropdown {
-  display: block;
+                
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  }
+                
+  .hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  }
+              
+  @media (max-width: 768px) {
+  header nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 100;
+  flex-direction: column;
+  }
+                
+  header nav.open {
+  display: flex;
+  }
+       
+  header nav a {
+  padding: 10px 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
   }
           
-  .genres:hover .dropdown {
+  .hamburger {
+  display: flex;
+  }
+          
+  .genres {
+  justify-content: flex-start;
+  width: 100%;
+  }
+                
+  .dropdown {
+  display: none;
+  position: static;
+  box-shadow: none;
+  }
+                
+  .dropdown.show {
+  display: block;
+  position: static;
+  }
+              
+  .dropdown-item {
+  position: relative;
+  }
+              
+  .sub-dropdown {
+  left: 100%;
+  top: 0;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  }
+              
+  .sub-dropdown.show {
   display: block;
   }
-
-    
+            
+  .sub-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  }
+              
+  .sub-dropdown a:hover {
+  background-color: #f0f0f0;
+  }
+}
+  
+  
   .about-band {
   display: flex;
   width: 100%;
@@ -510,3 +584,344 @@
   font-size: 17px;
   margin: 5px 0;
   }
+  
+  
+  @media (max-width: 768px) {
+  header {
+  padding: 10px 15px;
+  }
+  
+  header .logo {
+  font-size: 24px;
+  }
+  
+  header nav {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  }
+  
+  header nav.open {
+  display: flex;
+  }
+  
+  .hamburger {
+  display: flex;
+  }
+  
+  .about-band {
+  flex-direction: column;
+  height: auto;
+  }
+  
+  .left-block {
+  width: 100%;
+  padding: 20px;
+  }
+  
+  .left-block h2 {
+  font-size: 34px;
+  }
+  
+  .right-block {
+  width: 100%;
+  }
+  
+  .image-container {
+  height: 300px;
+  }
+  
+  .text-container {
+  padding: 20px;
+  }
+  
+  .albums-section h2 {
+  font-size: 38px;
+  }
+
+  .albums-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  }
+  
+  .album {
+  width: 100%;
+  }
+  
+  .album-image {
+  width: 200px;
+  height: 200px;
+  }
+  
+  .album h3 {
+  font-size: 16px;
+  }
+  
+  .album p {
+  font-size: 14px;
+  }
+  
+  .music-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  }
+  
+  .music-card {
+  width: 90%;
+  }
+  
+  .music-card-center {
+  width: 100%;
+  }
+  
+  .music-card h4 {
+  font-size: 18px;
+  }
+  
+  .music-card p {
+  font-size: 14px;
+  }
+  
+  footer {
+  padding: 20px 30px;
+  }
+            
+  footer .newsletter input[type="email"] {
+  width: 100%;
+  }
+            
+  footer button {
+  width: 100%;
+  }
+}
+  
+  
+  @media (max-width: 1024px) {
+  header {
+  padding: 15px 20px;
+  }
+  
+  header .logo {
+  font-size: 28px;
+  }
+  
+  .about-band {
+  flex-direction: column;
+  height: auto;
+  }
+  
+  .left-block {
+  width: 100%;
+  padding: 30px;
+  }
+  
+  .left-block h2 {
+  font-size: 42px;
+  }
+  
+  .right-block {
+  width: 100%;
+  }
+  
+  .image-container {
+  height: 450px;
+  }
+  
+  .text-container {
+  padding: 30px;
+  }
+  
+  .text-container p {
+  font-size: 18px;
+  }
+  
+  .albums-container {
+  flex-wrap: wrap;
+  gap: 50px;
+  }
+  
+  .album {
+  width: 45%;
+  }
+  
+  .album-image {
+  width: 250px;
+  height: 250px;
+  }
+  
+  .album h3 {
+  font-size: 18px;
+  }
+  
+  .album p {
+  font-size: 16px;
+  }
+  
+  .music-container {
+  flex-wrap: wrap;
+  gap: 40px;
+  }
+  
+  .music-card {
+  width: 280px;
+  }
+  
+  .music-card-center {
+  width: 300px;
+  }
+  
+  .music-card h4 {
+  font-size: 20px;
+  }
+  
+  .music-card p {
+  font-size: 16px;
+  }
+  
+  footer {
+  padding: 30px 40px;
+  }
+          
+  footer .newsletter input[type="email"] {
+  width: 250px;
+  }
+          
+  footer button {
+  width: 250px;
+  }
+}
+  
+  
+  @media (max-width: 1440px) {
+  header {
+  padding: 20px 40px;
+  }
+
+  header .logo {
+  font-size: 32px;
+  }
+
+  header nav a {
+  font-size: 20px;
+  }
+
+  .about-band {
+  height: auto;
+  flex-direction: column;
+  }
+
+  .left-block {
+  width: 100%;
+  padding: 50px;
+  }
+
+  .left-block h2 {
+  font-size: 50px;
+  }
+
+  .right-block {
+  width: 100%;
+  }
+
+  .image-container {
+  height: 550px;
+  }
+
+  .text-container {
+  padding: 50px;
+  }
+
+  .text-container p {
+  font-size: 20px;
+  }
+
+  .albums-section {
+  padding: 60px;
+  }
+
+  .albums-section h2 {
+  font-size: 50px;
+  }
+
+  .albums-container {
+  flex-wrap: wrap;
+  gap: 60px;
+  }
+
+  .album {
+  width: 320px;
+  }
+
+  .album-image {
+  width: 320px;
+  height: 320px;
+  }
+
+  .album h3 {
+  font-size: 22px;
+  }
+
+  .album p {
+  font-size: 18px;
+  }
+
+  .music-section {
+  padding: 80px;
+  }
+
+  .music-section h2 {
+  font-size: 50px;
+  }
+
+  .music-section h3 {
+  font-size: 22px;
+  }
+
+  .music-container {
+  gap: 50px;
+  }
+
+  .music-card {
+  width: 320px;
+  }
+
+  .music-card-center {
+  width: 350px;
+  }
+
+  .music-card h4 {
+  font-size: 22px;
+  }
+
+  .music-card p {
+  font-size: 18px;
+  }
+
+  footer {
+  padding: 50px 80px;
+  }
+
+  footer .contact-info p {
+  font-size: 24px;
+  }
+
+  footer .newsletter h3 {
+  font-size: 26px;
+  }
+
+  footer input[type="email"] {
+  width: 350px;
+  font-size: 18px;
+  }
+
+  footer button {
+  width: 350px;
+  font-size: 18px;
+  }
+
+  footer .footer-info p {
+  font-size: 18px;
+  }
+}
